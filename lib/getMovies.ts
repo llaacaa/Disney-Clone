@@ -37,7 +37,7 @@ export async function getMoviesProvider(urlNumber: number) {
 }
 
 export async function getDiscoverMovies(id?: string, keywords?: string) {
-  const url = new URL("https://api.themoviesdb.org/3/discover/movie");
+  const url = new URL("https://api.themoviedb.org/3/discover/movie");
 
   keywords && url.searchParams.set("with_keywords", keywords);
   id && url.searchParams.set("with_genres", id);

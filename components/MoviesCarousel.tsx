@@ -17,14 +17,10 @@ function MoviesCarousel({ title, movies, isVertical }: Props) {
 
       <div
         className={cn(
-          "flex overflow-scroll scrollbar-hide space-x-4 px-5 lg:px-10 py-5 ",
+          "flex overflow-scroll scrollbar-hide space-x-4 px-5 lg:px-10 py-5",
           isVertical && "flex-col space-x-0 space-y-12"
         )}
         key={title}
-        onWheel={(evt) => {
-          evt.preventDefault();
-          evt.currentTarget.scrollLeft += evt.deltaY;
-        }}
       >
         {isVertical
           ? movies.map((movie) => (
