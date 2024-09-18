@@ -3,7 +3,9 @@
 import { Movie } from "@/typings";
 import MovieCard from "./MovieCard";
 import { cn } from "@/lib/utils";
-import useEmblaCarousel from "embla-carousel-react";
+import ReactMultiCarousel from "./library_components/ReactMultiCarousel";
+import SwiperCarousel from "./library_components/SwiperCarousel";
+import GliderCarousel from "./library_components/GliderCarousel";
 
 type Props = {
   title?: string;
@@ -12,39 +14,12 @@ type Props = {
 };
 
 function MoviesCarousel({ title, movies, isVertical }: Props) {
-  const [emblaRef, emblaApi] = useEmblaCarousel({
-    dragFree: true,
-    loop: true,
-    skipSnaps: false,
-  });
   return (
     <div className="z-50">
       <h2 className="text-xl font-bold px-10 py-2">{title}</h2>
-      {!isVertical && (
-        <section className="embla">
-          <div className="embla__viewport" ref={emblaRef}>
-            <div className="embla__container">
-              {movies.map((movie) => (
-                <div className="embla__slide" key={movie.id}>
-                  <div className="embla__slide__number">
-                    <MovieCard movie={movie} />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        // <div className="embla" ref={emblaRef}>
-        //   <div className="embla__container">
-        //     {movies.map((movie) => (
-        //       <div className="embla__item" key={movie.id}>
-        //         <MovieCard movie={movie} />
-        //       </div>
-        //     ))}
-        //   </div>
-        // </div>
-      )}
+      {/* {!isVertical && <ReactMultiCarousel movies={movies} />} */}
+      {!isVertical && <SwiperCarousel movies={movies} />}
+      {/* <GliderCarousel movies={movies} /> */}
 
       {isVertical && (
         <div
