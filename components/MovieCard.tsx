@@ -6,7 +6,7 @@ function MovieCard({ movie }: { movie: Movie }) {
   return (
     <div
       className="relative flex-shrink-0 cursor-pointer transform hover:scale-105 
-    transition duration-200 ease-out hover:drop-shadow-lg"
+    transition duration-200 ease-out hover:drop-shadow-lg max-h-48"
     >
       <div
         className="absolute inset-0 bg-gradient-to-b from-gray-200/0

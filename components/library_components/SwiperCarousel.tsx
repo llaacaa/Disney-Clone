@@ -10,7 +10,7 @@ import "swiper/css/pagination";
 // import required modules
 
 // Pagation made for the buttons
-import { FreeMode, Pagination, Navigation } from "swiper/modules";
+import { FreeMode, Navigation } from "swiper/modules";
 import { Movie } from "@/typings";
 import MovieCard from "../MovieCard";
 

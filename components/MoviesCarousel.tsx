@@ -3,9 +3,7 @@
 import { Movie } from "@/typings";
 import MovieCard from "./MovieCard";
 import { cn } from "@/lib/utils";
-import ReactMultiCarousel from "./library_components/ReactMultiCarousel";
 import SwiperCarousel from "./library_components/SwiperCarousel";
-import GliderCarousel from "./library_components/GliderCarousel";
 
 type Props = {
   title?: string;
@@ -17,9 +15,7 @@ function MoviesCarousel({ title, movies, isVertical }: Props) {
   return (
     <div className="z-50">
       <h2 className="text-xl font-bold px-10 py-2">{title}</h2>
-      {/* {!isVertical && <ReactMultiCarousel movies={movies} />} */}
       {!isVertical && <SwiperCarousel movies={movies} />}
-      {/* <GliderCarousel movies={movies} /> */}
 
       {isVertical && (
         <div
