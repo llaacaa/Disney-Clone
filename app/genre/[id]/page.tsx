@@ -1,5 +1,5 @@
-import React from "react";
-import { Button } from "@/components/ui/button";
+import MoviesCarousel from "@/components/MoviesCarousel";
+import { getDiscoverMovies } from "@/lib/getMovies";
 
 type Props = {
   params: {
@@ -10,12 +10,21 @@ type Props = {
   };
 };
 
-function GenrePage({ params: { id }, searchParams: { genre } }: Props) {
+async function GenrePage({ params: { id }, searchParams: { genre } }: Props) {
+  const movies = await getDiscoverMovies(id);
+  const discover = await getDiscoverMovies();
+
   return (
     <>
-      <div>
-        Your id is {id} and the genre is {genre}
+      <div className="max-w-7xl mx-auto">
+        <div className="flex flex-col splce-y-4 mt-32 xl:mt-42">
+          <h1 className="text-6xl font-bold px-10">
+            Search results for {genre} genre
+          </h1>
+          <MoviesCarousel movies={movies} isVertical title="Movies" />
+        </div>
       </div>
+      <MoviesCarousel movies={discover} title="You may also like" />
     </>
   );
 }
