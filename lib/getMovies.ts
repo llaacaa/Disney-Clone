@@ -54,3 +54,10 @@ export async function getSearchMovies(term: string) {
   const data = await fetchFromTMBD(url);
   return data.results;
 }
+
+export async function getMovie(id: string) {
+  const url = new URL(`https://api.themoviedb.org/3/movie/${id}`);
+
+  const data = await fetchFromTMBD(url);
+  return data;
+}

@@ -3,7 +3,7 @@ import { getDiscoverMovies } from "@/lib/getMovies";
 
 type Props = {
   params: {
-    id: number;
+    id: string;
   };
   searchParams: {
     genre: string;

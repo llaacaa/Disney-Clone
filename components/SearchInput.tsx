@@ -23,7 +23,6 @@ function SearchInput() {
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
     router.push(`/search/${values.input}`);
     form.reset();
   }
