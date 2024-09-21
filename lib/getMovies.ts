@@ -1,4 +1,4 @@
-import { SearchResults } from "@/typings";
+import { Movie, SearchResults } from "@/typings";
 
 async function fetchFromTMBD(url: URL, cacheTime?: number) {
   url.searchParams.set("include_adult", "false");
@@ -58,6 +58,6 @@ export async function getSearchMovies(term: string) {
 export async function getMovie(id: string) {
   const url = new URL(`https://api.themoviedb.org/3/movie/${id}`);
 
-  const data = await fetchFromTMBD(url);
-  return data;
+  const data = (await fetchFromTMBD(url)) as unknown;
+  return data as Movie;
 }
