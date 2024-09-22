@@ -12,6 +12,13 @@ const config: Config = {
       flex: {
         full: "0 0 100%",
       },
+      textShadow: {
+        outline:
+          "1px 1px 0 black, -1px -1px 0 black, -1px 1px 0 black, 1px -1px 0 black",
+      },
+      stroke: {
+        black: "1px black",
+      },
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",

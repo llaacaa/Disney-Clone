@@ -28,7 +28,7 @@ function CarouselBanner({ movies }: { movies: Movie[] }) {
                 height={1080}
               />
               <div
-                className="hidden md:inline absolute mt-0 top-0 pt-40 xl:pt-52 left-0 lg:mt-40 bg-transparent z-20 
+                className="hidden md:inline absolute mt-0 top-0 pt-40 pl-5 xl:pt-52 left-0 lg:mt-40 bg-transparent z-20 
               h-full w-full  bg-gradient-to-r from-gray-900/90 via-transparent to-transparent"
               >
                 <h2 className="text-5xl font-bold max-w-xl z-50">
