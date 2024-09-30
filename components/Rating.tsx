@@ -14,10 +14,10 @@ function Rating({ rating, voteCount }: { rating: number; voteCount: number }) {
     </svg>
   ));
 
-  const voteCountString =
+  const voteCountString: string =
     voteCount / 1000 > 1
-      ? toString(parseInt(voteCount / 1000)) + "K"
-      : voteCount;
+      ? Math.floor(voteCount / 1000).toString() + "K"
+      : voteCount.toString();
 
   return (
     <div className="flex items-center pt-5">
