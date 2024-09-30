@@ -15,6 +15,14 @@ export default async function Home() {
         <MoviesCarousel movies={topRatedMovies} title="Top Rated" />
         <MoviesCarousel movies={popularMovies} title="Popular" />
       </div>
+      <div className="bg-black text-white py-4 text-center">
+        <p>Made by Lazar Kojic 2024</p>
+        <p className="text-sm">
+          This application is a copy of Disney+ and uses data from The Movie
+          Database API. All rights to the content belong to their respective
+          owners.
+        </p>
+      </div>
     </main>
   );
 }
