@@ -1,7 +1,6 @@
+import ImageLoader from "@/components/ImageLoader";
 import Rating from "@/components/Rating";
-import getImagePath from "@/lib/getImagePath";
 import { getMovie } from "@/lib/getMovies";
-import Image from "next/image";
 
 type Props = {
   params: {
@@ -20,15 +19,11 @@ async function MoviePage({ params: { id } }: Props) {
   return (
     <>
       <div className="flex-full min-w-0 relative w-screen h-screen">
-        <Image
-          className=" object-cover w-full h-full  opacity-50"
-          key={movie.id}
-          src={getImagePath(movie.backdrop_path, true)}
-          alt="Movie"
-          width={1920}
-          height={1080}
+        <ImageLoader
+          movie={movie}
+          classes="object-cover w-full h-full opacity-50"
         />
-        <div className="absolute left-5 inset-0  top-32 sm:left-32 z-50 w-2/3">
+        <div className="absolute left-5 inset-0  top-32 sm:left-32 z-40 w-2/3">
           <p className="text-2xl md:text-6xl sm:text-4xl  font-bold pb-2 ">
             {movie.title}{" "}
             <span className="text-lg md:text-3xl">{formattedDate}</span>

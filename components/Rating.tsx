@@ -15,7 +15,9 @@ function Rating({ rating, voteCount }: { rating: number; voteCount: number }) {
   ));
 
   const voteCountString =
-    voteCount / 1000 > 1 ? parseInt(voteCount / 1000) + "K" : voteCount;
+    voteCount / 1000 > 1
+      ? toString(parseInt(voteCount / 1000)) + "K"
+      : voteCount;
 
   return (
     <div className="flex items-center pt-5">
