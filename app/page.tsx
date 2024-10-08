@@ -15,7 +15,7 @@ export default async function Home() {
         <MoviesCarousel movies={topRatedMovies} title="Top Rated" />
         <MoviesCarousel movies={popularMovies} title="Popular" />
       </div>
-      <div className="bg-black text-white py-4 text-center fixed bottom-0">
+      <div className="bg-black text-white py-4 text-center bottom-0 fixed sm:static">
         <p>Made by Lazar Kojic 2024</p>
         <p className="text-sm">
           This application is a copy of Disney+ and uses data from The Movie
