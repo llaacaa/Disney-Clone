@@ -23,12 +23,14 @@ async function MoviePage({ params: { id } }: Props) {
           movie={movie}
           classes="object-cover w-full h-full opacity-50"
         />
-        <div className="absolute left-5 inset-0  top-32 sm:left-32 z-40 w-2/3">
+        <div className="absolute left-5 inset-0  top-32 sm:left-32 z-40 w-full  sm:w-2/3">
           <p className="text-2xl md:text-6xl sm:text-4xl  font-bold pb-2 ">
             {movie.title}{" "}
             <span className="text-lg md:text-3xl">{formattedDate}</span>
           </p>
-          <p className="md:text-4xl sm:text-2xl italic">{movie.overview}</p>
+          <p className="md:text-4xl sm:text-2xl italic w-2/3 sm:w-full">
+            {movie.overview}
+          </p>
           <Rating rating={movie.vote_average} voteCount={movie.vote_count} />
         </div>
         <div
