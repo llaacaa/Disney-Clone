@@ -28,7 +28,7 @@ async function MoviePage({ params: { id } }: Props) {
             {movie.title}{" "}
             <span className="text-lg md:text-3xl">{formattedDate}</span>
           </p>
-          <p className="md:text-4xl sm:text-2xl italic w-2/3">
+          <p className="md:text-4xl sm:text-2xl italic w-full sm:w-2/3">
             {movie.overview}
           </p>
           <Rating rating={movie.vote_average} voteCount={movie.vote_count} />
