@@ -20,19 +20,10 @@ function Rating({ rating, voteCount }: { rating: number; voteCount: number }) {
       : voteCount.toString();
 
   return (
-    <div className="flex items-center pt-5">
-      {stars}
-      <p className="ms-1 text-sm font-medium text-black dark:text-slate-300">
-        {rating}
-      </p>
-      <p className="ms-1 text-sm font-medium text-black dark:text-slate-300">
-        out of
-      </p>
-      <p className="ms-1 text-sm font-medium text-black dark:text-slate-300">
-        10
-      </p>
-      <p className="ms-1 text-sm font-medium text-black dark:text-slate-300">
-        ({voteCountString} votes)
+    <div className="items-center pt-5">
+      <div className="flex items-center pt-5">{stars}</div>
+      <p className="pt-5 ms-1 text-sm font-medium text-black dark:text-slate-300 w-full">
+        {rating} out of 10 ({voteCountString} votes)
       </p>
     </div>
   );
